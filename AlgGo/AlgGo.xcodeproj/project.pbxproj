@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB43F90A222E10EF00D6C837 /* ArraySets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB43F909222E10EF00D6C837 /* ArraySets.swift */; };
 		CBC8FD4E22281D4600121F6F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC8FD4D22281D4600121F6F /* main.swift */; };
 		CBC8FD5522281D5A00121F6F /* AlgGoObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC8FD5422281D5A00121F6F /* AlgGoObject.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CB43F909222E10EF00D6C837 /* ArraySets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArraySets.swift; sourceTree = "<group>"; };
 		CBC8FD4A22281D4600121F6F /* AlgGo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AlgGo; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC8FD4D22281D4600121F6F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		CBC8FD5422281D5A00121F6F /* AlgGoObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgGoObject.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			children = (
 				CBC8FD4D22281D4600121F6F /* main.swift */,
 				CBC8FD5422281D5A00121F6F /* AlgGoObject.swift */,
+				CB43F909222E10EF00D6C837 /* ArraySets.swift */,
 			);
 			path = AlgGo;
 			sourceTree = "<group>";
@@ -124,6 +127,7 @@
 			files = (
 				CBC8FD4E22281D4600121F6F /* main.swift in Sources */,
 				CBC8FD5522281D5A00121F6F /* AlgGoObject.swift in Sources */,
+				CB43F90A222E10EF00D6C837 /* ArraySets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
