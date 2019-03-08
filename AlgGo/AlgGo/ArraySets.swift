@@ -487,6 +487,8 @@ class ArraySets: NSObject {
      Input: [2,2,1,1,1,2,2]
      Output: 2
      */
+    
+    //Awesome answer
      func majorityElement(_ nums: [Int]) -> Int {
         var major: Int = nums.first!;
         var count: Int = 0
@@ -518,6 +520,8 @@ class ArraySets: NSObject {
      Output:
      [5,6]
      */
+    
+    //awesome Answer
     func findDisappearedNumbers(_ nums: [Int]) -> [Int] {
         
 //        List<Integer> ret = new ArrayList<Integer>();
@@ -554,7 +558,93 @@ class ArraySets: NSObject {
         
         return result
     }
+    
+    
+    /* 121. Best Time to Buy and Sell Stock
+     Say you have an array for which the ith element is the price of a given stock on day i.
+     
+     If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.
+     
+     Note that you cannot sell a stock before you buy one.
+     
+     Example 1:
+     
+     Input: [7,1,5,3,6,4]
+     Output: 5
+     Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+     Not 7-1 = 6, as selling price needs to be larger than buying price.
+     Example 2:
+     
+     Input: [7,6,4,3,1]
+     Output: 0
+     Explanation: In this case, no transaction is done, i.e. max profit = 0.
+     */
+    
+    func maxProfit(_ prices: [Int]) -> Int {
+        if prices.count <= 1 {
+            return 0
+        }
+        var temp: Int = Int.max
+        var maxProfit = 0
+        for index in 0..<prices.count {
+            temp = min(temp, prices[index])
+            maxProfit = max(maxProfit, prices[index] - temp)
+        }
+        return maxProfit
+    }
+    
+    /* 830. Positions of Large Groups
+     In a string S of lowercase letters, these letters form consecutive groups of the same character.
+     For example, a string like S = "abbxxxxzyy" has the groups "a", "bb", "xxxx", "z" and "yy".
+     Call a group large if it has 3 or more characters.  We would like the starting and ending positions of every large group.
+     The final answer should be in lexicographic order.
+     Example 1:
+     
+     Input: "abbxxxxzzy"
+     Output: [[3,6]]
+     Explanation: "xxxx" is the single large group with starting  3 and ending positions 6.
+     Example 2:
+     
+     Input: "abc"
+     Output: []
+     Explanation: We have "a","b" and "c" but no large group.
+     Example 3:
+     
+     Input: "abcdddeeeeaabbbcd"
+     Output: [[3,5],[6,9],[12,14]]
+     */
+    func largeGroupPositions(_ S: String) -> [[Int]] {
+        return [[1]]
+    }
+    
+    
+    /* 697. Degree of an Array
+     Given a non-empty array of non-negative integers nums, the degree of this array is defined as the maximum frequency of any one of its elements.
+     
+     Your task is to find the smallest possible length of a (contiguous) subarray of nums, that has the same degree as nums.
+     
+     Example 1:
+     Input: [1, 2, 2, 3, 1]
+     Output: 2
+     Explanation:
+     The input array has a degree of 2 because both elements 1 and 2 appear twice.
+     Of the subarrays that have the same degree:
+     [1, 2, 2, 3, 1], [1, 2, 2, 3], [2, 2, 3, 1], [1, 2, 2], [2, 2, 3], [2, 2]
+     The shortest length is 2. So return 2.
+     Example 2:
+     Input: [1,2,2,3,1,4,2]
+     Output: 6
+     */
+    func findShortestSubArray(_ nums: [Int]) -> Int {
+        
+        
+        return 2
+    }
+    
 }
+
+
+
 
 
 extension String {

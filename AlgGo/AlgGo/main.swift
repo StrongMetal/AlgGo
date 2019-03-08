@@ -47,8 +47,15 @@ let arrObject = ArraySets()
 //let resultArr = arrObject.isToeplitzMatrix([[11,74,0,93],
 //                                            [40,11,74,7]])
 
-let result = arrObject.findDisappearedNumbers(
-    [4, 3, 2, 7, 8, 2, 3, 1])
+//let result = arrObject.findDisappearedNumbers(
+//    [4, 3, 2, 7, 8, 2, 3, 1])
+//let result = arrObject.maxProfit([7,1,5,3,6,4])
+
+
+
+//medium
+let mediumSets = ArrayMediumSets()
+let result = mediumSets.deckRevealedIncreasing([17,13,11,2,3,5,7])
 
 print(result)
 
