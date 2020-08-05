@@ -76,7 +76,7 @@ class ArrayMediumSets: NSObject {
         var nums = nums
         var result = [Int]()
         for index in 0..<nums.count - 1 {
-            var i = abs(nums[index]) - 1
+            let i = abs(nums[index]) - 1
             if nums[i] < 0 {
                 result.append(i + 1)
             }

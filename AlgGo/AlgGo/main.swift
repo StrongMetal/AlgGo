@@ -54,8 +54,35 @@ let arrObject = ArraySets()
 
 
 //medium
-let mediumSets = ArrayMediumSets()
-let result = mediumSets.deckRevealedIncreasing([17,13,11,2,3,5,7])
+//let mediumSets = ArrayMediumSets()
+//let result = mediumSets.deckRevealedIncreasing([17,13,11,2,3,5,7])
 
+//print(result)
+
+//94. Binary Tree Inorder Traversal
+
+let treeNodeAlg = BinaryTree()
+
+
+let treeNode0 = BinaryTree.TreeNode.init(value:3)
+let treeNode1 = BinaryTree.TreeNode.init(value:4)
+let treeNode2 = BinaryTree.TreeNode.init(value:5)
+//let treeNode3 = BinaryTree.TreeNode.init(value:6)
+let treeNode4 = BinaryTree.TreeNode.init(value:7)
+let treeNode5 = BinaryTree.TreeNode.init(value:8)
+let treeNode6 = BinaryTree.TreeNode.init(value:9)
+let treeNode7 = BinaryTree.TreeNode.init(value:10)
+
+treeNode4.leftNode = treeNode1
+treeNode4.rightNode = treeNode6
+treeNode1.leftNode = treeNode0
+treeNode1.rightNode = treeNode2
+treeNode6.leftNode = treeNode5
+treeNode6.rightNode = treeNode7
+
+let result = treeNodeAlg.inorderTraversal(treeNode: treeNode4)
 print(result)
+
+
+
 

@@ -145,10 +145,44 @@ class AlgGoObject: NSObject {
     func findMedianSortedArrays(_ nums1: [Int], _ nums2: [Int]) -> Double {
         let nums1Count: Int = nums1.count;
         let nums2Count: Int = nums2.count;
+
+        if nums1Count == 0 && nums2Count != 0 {
+            if nums2Count % 2 == 0 {
+                return 0;
+            } else {
+                return Double(nums2[nums2Count/2 + 1])
+            }
+        }
+        
+        if nums2Count == 0 && nums1Count != 0 {
+            if nums1Count % 2 == 0 {
+                return 0
+            } else {
+                return Double(nums1[nums1Count/2 + 1])
+            }
+        }
+        
+        let midian = (nums1Count + nums2Count) / 2 + 1
+        
+        var i = 0, j = 0
         
         if (nums1Count + nums2Count) % 2 == 0 {
-            
+            return 0
         } else {
+            while i + j <= nums1Count + nums2Count {
+                if nums1[i] > nums2[j] && (j <= nums2Count)  {
+                    j += 1
+                    if i + j == midian {
+                        return Double(nums2[j])
+                    }
+                } else {
+                    i += 1
+                    if i + j == midian {
+                        return Double(nums1[i])
+                    }
+                }
+                
+            }
             
         }
         
