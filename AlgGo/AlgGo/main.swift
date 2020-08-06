@@ -59,30 +59,33 @@ let arrObject = ArraySets()
 
 //print(result)
 
-//94. Binary Tree Inorder Traversal
 
 let treeNodeAlg = BinaryTree()
 
 
-let treeNode0 = BinaryTree.TreeNode.init(value:3)
-let treeNode1 = BinaryTree.TreeNode.init(value:4)
-let treeNode2 = BinaryTree.TreeNode.init(value:5)
+let treeNode0 = BinaryTree.TreeNode.init(3)
+let treeNode1 = BinaryTree.TreeNode.init(4)
+let treeNode2 = BinaryTree.TreeNode.init(5)
 //let treeNode3 = BinaryTree.TreeNode.init(value:6)
-let treeNode4 = BinaryTree.TreeNode.init(value:7)
-let treeNode5 = BinaryTree.TreeNode.init(value:8)
-let treeNode6 = BinaryTree.TreeNode.init(value:9)
-let treeNode7 = BinaryTree.TreeNode.init(value:10)
+let treeNode4 = BinaryTree.TreeNode.init(7)
+let treeNode5 = BinaryTree.TreeNode.init(8)
+let treeNode6 = BinaryTree.TreeNode.init(9)
+let treeNode7 = BinaryTree.TreeNode.init(10)
 
-treeNode4.leftNode = treeNode1
-treeNode4.rightNode = treeNode6
-treeNode1.leftNode = treeNode0
-treeNode1.rightNode = treeNode2
-treeNode6.leftNode = treeNode5
-treeNode6.rightNode = treeNode7
+treeNode4.left = treeNode1
+treeNode4.right = treeNode6
+treeNode1.left = treeNode0
+treeNode1.right = treeNode2
+treeNode6.left = treeNode5
+treeNode6.right = treeNode7
 
-let result = treeNodeAlg.inorderTraversal(treeNode: treeNode4)
+//94. Binary Tree Inorder Traversal
+//let result = treeNodeAlg.inorderTraversal(nil)
+//print(result)
+
+
+//102. Binary Tree Level Order Traversal medium
+let result = treeNodeAlg.levelOrder(nil)
 print(result)
-
-
 
 
