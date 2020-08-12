@@ -86,6 +86,25 @@ treeNode6.right = treeNode7
 
 //102. Binary Tree Level Order Traversal medium
 let result = treeNodeAlg.levelOrder(nil)
-print(result)
+    //print(result)
 
 
+/*105. Construct Binary Tree from Preorder and Inorder Traversal */
+
+//let preorder = [3,9,20,15,7]
+//let inorder = [9,3,15,20,7]
+//let preorder = [1,2]
+//let inorder = [1,2]
+let preorder = [1,2,3]
+let inorder = [2,3,1]
+
+let output = treeNodeAlg.buildTree1(preorder, inorder)
+//print(treeNodeAlg.levelOrder(output))
+
+/*106. Construct Binary Tree from Inorder and Postorder Traversal*/
+
+let inorder1 = [9,3,15,20,7]
+let postorder = [9,15,7,20,3]
+
+let output1 = treeNodeAlg.buildIPHelper(0, 0, postorder.count - 1, inorder1.count - 1, inorder1, postorder);
+print(treeNodeAlg.levelOrder(output1))
