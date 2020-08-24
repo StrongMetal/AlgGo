@@ -237,16 +237,65 @@ class BinaryTree: NSObject {
         for i in inStart...inEnd {
             if inorder[i] == rootNode.val {
                 index = i
+                break
             }
         }
         
         let mpostEnd: Int = postEnd - 1
         
-        rootNode.left = buildIPHelper(inStart, postStart, index - 1, index - 1, inorder, postorder)
-        rootNode.right = buildIPHelper(index + 1, index + 1, mpostEnd, inEnd, inorder, postorder)
+        rootNode.left = buildIPHelper(inStart, postStart, postStart - inStart + index - 1, index - 1, inorder, postorder)
+        rootNode.right = buildIPHelper(index + 1, postStart - inStart + index, mpostEnd, inEnd, inorder, postorder)
         
         
         return rootNode
+    }
+    
+    
+    /*112. Path Sum    easy
+     Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.
+
+     Note: A leaf is a node with no children.
+
+     Example:
+
+     Given the below binary tree and sum = 22,
+
+           5
+          / \
+         4   8
+        /   / \
+       11  13  4
+      /  \      \
+     7    2      1
+     return true, as there exist a root-to-leaf path 5->4->11->2 which sum is 22.
+
+     Accepted
+     491,214
+     Submissions
+     1,192,456
+     */
+    
+    func hasPathSum(_ root: TreeNode?, _ sum: Int) -> Bool {
+        if root == nil || sum == 0 {
+            return false
+        }
+        
+        var currentNode = root
+        var stack = [TreeNode]()
+        while currentNode != nil || !stack.isEmpty {
+            while currentNode != nil {
+                if currentNode!.left != nil {
+                    stack.append(currentNode!.left!)
+                }
+                currentNode = currentNode?.left
+            }
+            
+            currentNode = stack.popLast()
+            
+            
+        }
+        
+        return false
     }
 
 }
